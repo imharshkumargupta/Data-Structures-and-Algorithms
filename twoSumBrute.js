@@ -1,6 +1,4 @@
 function findTwoSum(integerArray, target) {
-  if (integerArray.length === 0 || integerArray.length === 1)
-    return "Array too short";
   for (let i = 0; i < integerArray.length; i++) {
     for (let j = i + 1; j < integerArray.length; j++) {
       if (integerArray[i] + integerArray[j] === target) {
