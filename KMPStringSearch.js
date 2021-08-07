@@ -1,4 +1,5 @@
 //complete the solution to this problem later; the matchTable is complete
+// -- view the slides from colt steele in the course resources
 
 function matchTable(string) {
   const array = Array.from({ length: string.length }).fill(0);
