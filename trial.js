@@ -1,5 +1,8 @@
-function linearSearch(array, target) {
-  return array.indexOf(target);
+const array = Array.from({ length: 5 }, (v, i) => i);
+
+function argument(a, b, c) {
+  console.log(arguments);
 }
 
-console.log(linearSearch([1, 4, 5, 6, 8], 10));
+console.log(array);
+argument(...array);
