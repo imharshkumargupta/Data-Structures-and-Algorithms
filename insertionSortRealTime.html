@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="number" id="newNumber" />
+    <button id="add">Add Value to the array</button>
+    <p id="demo"></p>
+
+    <script>
+      let array = [];
+      document.getElementById("add").addEventListener("click", function () {
+        let newNumber = document.getElementById("newNumber").valueAsNumber;
+        array.push(newNumber);
+        insertionSort(array);
+        console.log(insertionSort(array));
+        document.getElementById("demo").innerHTML = array;
+      });
+
+      function insertionSort(array) {
+        for (let i = 1; i < array.length; i++) {
+          let currentValue = array[i];
+          let j = i - 1;
+          while (j >= 0 && array[j] > currentValue) {
+            array[j + 1] = array[j];
+            j--;
+          }
+          array[j + 1] = currentValue;
+        }
+        return array;
+      }
+    </script>
+  </body>
+</html>
