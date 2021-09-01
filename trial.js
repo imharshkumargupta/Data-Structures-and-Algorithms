@@ -1,8 +1,4 @@
-const array = Array.from({ length: 5 }, (v, i) => i);
-
-function argument(a, b, c) {
-  console.log(arguments);
-}
+const array = [[1], [2], [3]];
 
 console.log(array);
-argument(...array);
+console.log([].concat(...array));
