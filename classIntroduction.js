@@ -17,4 +17,5 @@ const student2 = new Student("Beena", "Young");
 console.log(student2);
 
 console.log(student1.name);
+student1.name = "Guna";
 student1.statement();
