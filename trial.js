@@ -1,12 +1,12 @@
-function twoSumBrute(array, target) {
-  if (array.length <= 1) return null;
-  for (let i = 0; i < array.length; i++) {
-    const numberToFind = target - array[i];
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[j] === numberToFind) return [i, j];
-    }
+function twoSumOptimal(nums, target) {
+  const hashMap = {};
+  for (let i = 0; i < nums.length; i++) {
+    const currentMapVal = hashMap[nums[i]];
+    if (currentMapVal >= 0) return [currentMapVal, i];
+    let numberToFind = target - nums[i];
+    hashMap[numberToFind] = i;
   }
   return null;
 }
 
-console.log(twoSumBrute([1, 24], 25));
+console.log(twoSumOptimal([1, 3, 7, 9, 2], 4));
